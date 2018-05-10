@@ -32,7 +32,10 @@ int main()
                 manB[y]+=product[x];
                 priceB[x][y] = product[x];
             }
+            
+            cout << buying[x][y] << "/" << manA[y] << "/" << manB[y] << "/" << priceA[x][y] << "/" << priceB[x][y] << " ";
         }
+        cout << endl;
     }
     
     int change = -1;
@@ -57,27 +60,17 @@ int main()
     cout << "最多可以找" << change << "元時：" << endl;
     cout << "甲需要付: ";
     for (int i = 0; i < amount; i++) {
-		if (priceA[i][serialNum] == 0) {
-        } else if (i == amount-1 || priceA[i+1][serialNum] == 0) {
-            cout << priceA[i][serialNum] << "元=";
-        } else {
-            cout << priceA[i][serialNum] << "元+";
-        }
+        cout << priceA[i][serialNum] << "元 ";
         totalA+=priceA[i][serialNum];
     }
-    cout << totalA << "元" << endl;
+    cout << "總共是：" << totalA << "元" << endl;
     
     cout << "乙需要付: ";
     for (int i = 0; i < amount; i++) {
-		if (priceB[i][serialNum] == 0) {
-        } else if (i == amount-1 || priceB[i+1][serialNum] == 0) {
-            cout << priceB[i][serialNum] << "元=";
-        } else {
-            cout << priceB[i][serialNum] << "元+";
-        }
+        cout << priceB[i][serialNum] << "元 ";
         totalB+=priceB[i][serialNum];
     }
-    cout << totalB << "元";
+    cout << "總共是：" << totalB << "元";
     
     return 0;
 }
