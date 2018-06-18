@@ -70,7 +70,7 @@ int main()
         cout << priceB[i][serialNum] << "元 ";
         totalB+=priceB[i][serialNum];
     }
-    cout << "總共是：" << totalB << "元";
+    cout << "總共是：" << totalB << "元0";
     
     return 0;
 }
